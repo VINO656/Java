@@ -1,0 +1,9 @@
+
+
+if(n<(-100) || n>100){
+    System.out.println("n is wrong");
+}
+
+String s=Integer.toString(n);
+   //Write your code here
+
