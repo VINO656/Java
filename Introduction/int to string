@@ -1,9 +1,30 @@
 
 
-if(n<(-100) || n>100){
-    System.out.println("n is wrong");
+import java.util.Scanner;
+
+public class NumberChecker {
+    public static void main(String[] args) {
+        // Create a Scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt the user to input a number
+        System.out.print("Enter an integer: ");
+        int n = scanner.nextInt();
+        
+        // Check if n is outside the range of -100 to 100
+        if (n < -100 || n > 100) {
+            System.out.println("n is wrong");
+        }
+        
+        // Convert the integer n to a string
+        String s = Integer.toString(n);
+        
+        // Output the result of the conversion
+        System.out.println("The number as a string is: " + s);
+        
+        // Close the scanner
+        scanner.close();
+    }
 }
 
-String s=Integer.toString(n);
-   //Write your code here
 
