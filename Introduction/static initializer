@@ -1,22 +1,43 @@
 
- static int B;
+import java.util.Scanner;
+
+public class RectangleArea {
+    // Declare static variables for breadth and height
+    static int B;
     static int H;
     static boolean flag = true;
 
+    // Static block to initialize B, H and check conditions
     static {
         Scanner sc = new Scanner(System.in);
+        
+        // Input for breadth and height
         B = sc.nextInt();
         H = sc.nextInt();
         sc.close();
         
+        // Check if breadth and height are positive
         if (B <= 0 || H <= 0) {
             flag = false;
             try {
+                // Throw exception if values are not positive
                 throw new Exception("Breadth and height must be positive");
             } catch (Exception e) {
+                // Print the exception message
                 System.out.println(e);
             }
         }
     }
+
+    public static void main(String[] args) {
+        // Check if flag is true before calculating the area
+        if (flag) {
+            // Calculate and print the area of the rectangle
+            int area = B * H;
+            System.out.println("Area of the rectangle: " + area);
+        }
+    }
+}
+
 
     
